@@ -59,7 +59,7 @@ choose
 
 `make`
 
-<br>
+
 ## BLTouch
 
 I use these links to find how to configure it :
@@ -73,7 +73,7 @@ Bed mesh :
 [https://github.com/KevinOConnor/klipper/blob/master/docs/Bed\_Mesh.md](https://github.com/KevinOConnor/klipper/blob/master/docs/Bed_Mesh.md)
 [https://docs.fluidd.xyz/features/bed\_mesh](https://docs.fluidd.xyz/features/bed_mesh)
 
-<br>
+
 ## ZOFFSET
 
 [https://www.klipper3d.org/Probe\_Calibrate.html#calibrating-probe-z-offset](https://www.klipper3d.org/Probe_Calibrate.html#calibrating-probe-z-offset)
@@ -111,7 +111,7 @@ PURGE
 ```
 <br>
 End gcode :
-<br>
+
 ```
 END_PRINT
 ```
@@ -135,12 +135,8 @@ Klipper use rotation\_distance, based on the hardware of the printer. So, rotati
 So, why the sizes are not good ? Just because you need to calibrate the extruder !
 [https://github.com/KevinOConnor/klipper/blob/master/docs/Rotation\_Distance.md#calibrating-rotation\_distance-on-extruders](https://github.com/KevinOConnor/klipper/blob/master/docs/Rotation_Distance.md#calibrating-rotation_distance-on-extruders)
 
-<br>
-premiere impression pour tester
-[https://www.lesimprimantes3d.fr/forum/topic/33061-changer-de-firmware-de-marlin-%C3%A0-klipper/](https://www.lesimprimantes3d.fr/forum/topic/33061-changer-de-firmware-de-marlin-%C3%A0-klipper/)
-[https://www.lesimprimantes3d.fr/forum/topic/20330-tuto-installer-et-configurer-klipper/](https://www.lesimprimantes3d.fr/forum/topic/20330-tuto-installer-et-configurer-klipper/)
 
-<br>
+
 # Improve your prints
 
 ## Resonance Compensation
@@ -162,18 +158,3 @@ I don't do it for now.
 
 I have : 16,3mm
 So  max\_accel : 3000 , like the default config.
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<span class="colour" style="color: rgb(32, 33, 36);">klipper : firmware / klippy host</span>
-<span class="colour" style="color: rgb(32, 33, 36);">fluidd : web interface</span>
-<span class="colour" style="color: rgb(32, 33, 36);">moonraker : API Web Server for Klipper</span>
-<span class="colour" style="color: rgb(32, 33, 36);">klipper : firmware / klippy host</span>
-<span class="colour" style="color: rgb(32, 33, 36);">fluidd : web interface</span>
-<span class="colour" style="color: rgb(32, 33, 36);">moonraker : API Web Server for Klipper</span>
