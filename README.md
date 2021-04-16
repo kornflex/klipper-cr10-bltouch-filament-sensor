@@ -31,8 +31,9 @@ apt-get update && apt-get upgrade
 ## Update Klipper/Fluidd/Moonraker
 
 Use this software : [kiauh](https://github.com/th33xitus/kiauh)
+
 Or launch updates from the [webUI](https://docs.fluidd.xyz/features/updates)
-<br>
+
 # Configure your printer
 
 ## Get your printer.cfg
@@ -40,16 +41,19 @@ Or launch updates from the [webUI](https://docs.fluidd.xyz/features/updates)
 Find the [default config of your printer](https://github.com/KevinOConnor/klipper/tree/master/config) without improvements ( you can print something but you will need to modify some things to print quickly ).
 
 For the Creality Cr10 v1 : [https://github.com/KevinOConnor/klipper/blob/master/config/printer-creality-cr10-2017.cfg](https://github.com/KevinOConnor/klipper/blob/master/config/printer-creality-cr10-2017.cfg)
+
 Upload it in your Fluidd webUI and name it : printer.cfg
 <br>
 ## Get the USB port
 
 Find the USB port of your printer : `ls /dev/serial/by-id/*`
+
 ls -l will redirect you to : `/dev/ttyUSB0`
 <br>
 ## Flash printer
 
 `make menuconfig`
+
 choose
 `AVR atmega1284p`
 
@@ -82,6 +86,7 @@ You will need to do the "paper test"
 [https://github.com/KevinOConnor/klipper/blob/master/docs/RPi\_microcontroller.md](https://github.com/KevinOConnor/klipper/blob/master/docs/RPi_microcontroller.md)
 
 You will need to use the raspberry pi GPIO.
+
 You need to compile the MCU drivers.
 
 # Camera
