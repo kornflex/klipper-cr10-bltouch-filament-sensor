@@ -10,6 +10,7 @@ First of all, if you are using the default firmware from the manufacturer, you n
 - - -
 
 This article will describe shortly what to do to switch from Marlin to Klipper.
+You will find a lot of official docs here : [https://github.com/KevinOConnor/klipper/tree/master/docs](https://github.com/KevinOConnor/klipper/tree/master/docs)
 
 3 things you need to know :
 
@@ -64,6 +65,7 @@ I use these links to find how to configure it :
 
 <br>
 Bed mesh :
+
 [https://github.com/KevinOConnor/klipper/blob/master/docs/Bed\_Mesh.md](https://github.com/KevinOConnor/klipper/blob/master/docs/Bed_Mesh.md)
 [https://docs.fluidd.xyz/features/bed\_mesh](https://docs.fluidd.xyz/features/bed_mesh)
 
@@ -85,19 +87,47 @@ You need to compile the MCU drivers.
 # Camera
 
 [https://docs.fluidd.xyz/features/cameras](https://docs.fluidd.xyz/features/cameras)
+<br>
+# Configure your slicer
 
-prusa to klipper send gcode [https://docs.fluidd.xyz/features/slicer-uploads](https://docs.fluidd.xyz/features/slicer-uploads)
+## Macros
+
+Klipper use macro. Some Gcodes are unknown from Klipper, like G29.
+[https://mmone.github.io/klipper/G-Codes.html](https://mmone.github.io/klipper/G-Codes.html)
+
+After changing macros, Prusaslicer just have few lines :
+
+Start gcode :
+<br>
+```
+START_PRINT BED_TEMP=[first_layer_bed_temperature] EXTRUDER_TEMP=[first_layer_temperature]
+G29 ;Bed Level
+PURGE
+```
+<br>
+End gcode :
+<br>
+```
+END_PRINT
+```
+
+## Thumbnails
+
+[https://docs.fluidd.xyz/features/slicer-uploads](https://docs.fluidd.xyz/features/slicer-uploads)
 [https://docs.fluidd.xyz/features/thumbnails](https://docs.fluidd.xyz/features/thumbnails)
 
-<br>
-<br>
-<br>
-tester tous les mouvements : OK
-chauffe bed et extrudeur : OK
-check filament pause/resume : OK
+# First print
 
-<br>
-calibrer extrudeur
+Try to move all axis, heat bed and extruder, check if the filament sensor pause/resume the print.
+Launch a cube test print for example.
+
+## Calibration
+
+After the first cube calibration print, you will see that size isn't good.
+So, with the last klipper firmware, you don't need to change the steps/mm like in Marlin.
+Klipper use rotation\_distance, based on the hardware of the printer. So, rotation\_distance is good. Nothing to change.
+
+So, why the sizes are not good ? Just because you need to calibrate the extruder !
 [https://github.com/KevinOConnor/klipper/blob/master/docs/Rotation\_Distance.md#calibrating-rotation\_distance-on-extruders](https://github.com/KevinOConnor/klipper/blob/master/docs/Rotation_Distance.md#calibrating-rotation_distance-on-extruders)
 
 <br>
@@ -106,41 +136,27 @@ premiere impression pour tester
 [https://www.lesimprimantes3d.fr/forum/topic/20330-tuto-installer-et-configurer-klipper/](https://www.lesimprimantes3d.fr/forum/topic/20330-tuto-installer-et-configurer-klipper/)
 
 <br>
-Calibration, scaling factor pour calibrer le X, y et z
+# Improve your prints
 
+## Resonance Compensation
+
+[https://github.com/KevinOConnor/klipper/blob/master/docs/Resonance\_Compensation.md](https://github.com/KevinOConnor/klipper/blob/master/docs/Resonance_Compensation.md)
+
+My test is good. I have a small ringing frequency : About 23Hz. So I don't need to set "input shaper".
+I have to invest into stiffening the printer.
+
+## Measuring Resonances
+
+[https://github.com/KevinOConnor/klipper/blob/master/docs/Measuring\_Resonances.md](https://github.com/KevinOConnor/klipper/blob/master/docs/Measuring_Resonances.md)
+
+I don't do it for now.
 <br>
-Si erreur, il faut adapter le gcode :
-utilisation de macro
-[https://mmone.github.io/klipper/G-Codes.html](https://mmone.github.io/klipper/G-Codes.html)
-Voir liens du dessus sur le forum
+## Pressure advance
 
-<br>
-Refaire le cube calibration
+[https://github.com/KevinOConnor/klipper/blob/master/docs/Pressure\_Advance.md#tuning-pressure-advance](https://github.com/KevinOConnor/klipper/blob/master/docs/Pressure_Advance.md#tuning-pressure-advance)
 
-<br>
-Améliorer les prints : [https://github.com/KevinOConnor/klipper/blob/master/docs/Overview.md](https://github.com/KevinOConnor/klipper/blob/master/docs/Overview.md)
-
-A partir de Resonance compensation puis pressure advance et input shaping
-resonance compensation/input shaper : 23 hz : donc il faut rigidifier l'imprimante
-
-pressure advance : [https://github.com/KevinOConnor/klipper/blob/master/docs/Pressure\_Advance.md#tuning-pressure-advance](https://github.com/KevinOConnor/klipper/blob/master/docs/Pressure_Advance.md#tuning-pressure-advance)
-
-16,3mm
-
-<br>
-max\_accel : 3000
-
-Les + de klipper à mettre en place :
-
-Screw tilts
-
-pour imprimer plus vite :
-mettre des patins anti vibration en dessous de l'imprimante
-
-<br>
-<br>
-capteur de vibration
-[https://www.klipper3d.org/Measuring\_Resonances.html](https://www.klipper3d.org/Measuring_Resonances.html)
+I have : 16,3mm
+So  max\_accel : 3000 , like the default config.
 
 <br>
 <br>
