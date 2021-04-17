@@ -12,6 +12,10 @@ First of all, if you are using the default firmware from the manufacturer, you n
 This article will describe shortly what to do to switch from Marlin to Klipper.
 You will find a lot of official docs here : [https://github.com/KevinOConnor/klipper/tree/master/docs](https://github.com/KevinOConnor/klipper/tree/master/docs)
 
+
+Final configuration files are shared in "klipper_config" directory. You can use them for your printer but you will have to check "extruder calibration" and "Improve your prints" chapiters to adapt the configuration to your printer.
+
+
 3 things you need to know :
 
 * klipper : firmware / klippy host
@@ -158,3 +162,6 @@ I don't do it for now.
 
 I have : 16,3mm
 So  max\_accel : 3000 , like the default config.
+
+# Final Config
+When you will do all the things, you will have configuration files like me, shared in "klipper_config" directory.
