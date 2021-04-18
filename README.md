@@ -71,6 +71,8 @@ I use these links to find how to configure it :
 [https://www.klipper3d.org/Config\_Reference.html#bltouch](https://www.klipper3d.org/Config_Reference.html#bltouch)
 [https://www.klipper3d.org/BLTouch.html](https://www.klipper3d.org/BLTouch.html)
 
+If you need to convert marlin's pin to klipper, you will need this doc : https://github.com/KevinOConnor/klipper/blob/master/docs/FAQ.md#how-do-i-convert-a-marlin-pin-number-to-a-klipper-pin-name
+
 <br>
 Bed mesh :
 
