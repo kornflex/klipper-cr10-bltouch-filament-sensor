@@ -63,6 +63,12 @@ choose
 
 `make`
 
+`sudo service klipper stop`
+
+`make flash FLASH_DEVICE=/dev/ttyUSB0`
+
+`sudo service klipper start`
+
 
 ## BLTouch
 
@@ -91,9 +97,27 @@ You will need to do the "paper test"
 [https://www.reddit.com/r/klippers/comments/l2iacb/ender\_5\_plus\_klipper\_fluidd\_filament\_sensor/?utm\_source=amp&utm\_medium=&utm\_content=post\_body](https://www.reddit.com/r/klippers/comments/l2iacb/ender_5_plus_klipper_fluidd_filament_sensor/?utm_source=amp&utm_medium=&utm_content=post_body)
 [https://github.com/KevinOConnor/klipper/blob/master/docs/RPi\_microcontroller.md](https://github.com/KevinOConnor/klipper/blob/master/docs/RPi_microcontroller.md)
 
-You will need to use the raspberry pi GPIO.
+You will need to use the raspberry pi GPIO. (https://www.klipper3d.org/RPi_microcontroller.html?h=gpio)
 
 You need to compile the MCU drivers.
+
+`cd ~/klipper/`
+
+`sudo cp ./scripts/klipper-mcu.service /etc/systemd/system/`
+
+`sudo systemctl enable klipper-mcu.service`
+
+
+
+`cd ~/klipper/`
+
+`make menuconfig`
+
+`sudo service klipper stop`
+
+`make flash`
+
+`sudo service klipper start`
 
 # Camera
 
