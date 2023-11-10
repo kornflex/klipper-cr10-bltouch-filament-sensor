@@ -24,19 +24,9 @@ Final configuration files are shared in "klipper_config" directory. You can use 
 
 # Fluiddpi
 
-## Installation
+## OS Installation
 
-on SDCard, you need to download and install Fluiddpi : [https://docs.fluidd.xyz/installation/fluiddpi](https://docs.fluidd.xyz/installation/fluiddpi)
-<br>
-## Update OS
-
-apt-get update && apt-get upgrade
-<br>
-## Update Klipper/Fluidd/Moonraker
-
-Use this software : [kiauh](https://github.com/th33xitus/kiauh)
-
-Or launch updates from the [webUI](https://docs.fluidd.xyz/features/updates)
+on SDCard, you need to download and install RaspbianOS and all the klipper system. To help you, use this software : [kiauh](https://github.com/th33xitus/kiauh). All is described.
 
 # Configure your printer
 
